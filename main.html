@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./bootstrap.css" />
+    <title>Number Base Converter</title>
+</head>
+<!-- <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">NumberBase Converter</a>
+          </div>
+      </nav> -->
+
+<body class="overflow-hidden">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand text-dark">NumberBase Converter</a>
+        </div>
+    </nav>
+    <div class=" container">
+        <div class="container col-lg-6 p-4 mx-auto my-5 py-4 md-11 card border-success mb-3">
+            <h1 class="container text-dark">Number Base Converter</h1><br>
+            <input class=" fs-5 col-md-11" type="text" id="inputNumber" onkeyup="keeUp()" placeholder="Your Number">
+            </input>
+            <br />
+            <div class="d-flex justify-content-between">
+                <div class="d-flex flex-row md-11">
+                    <div class="col-sm-7">
+                        <div class="form-group">
+                            <label for="from">From</label>
+                            <select class="form-select" name="from" id="from" onchange="fromChange()">
+                                <option value="">Select Option</option>
+                                <option value="decimal">Decimal</option>
+                                <option value="binary">Binary</option>
+                                <option value="hexadecimal">Hexadecimal</option>
+                                <option value="octal">Octal</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-outline-warning btn-sm mx-3" style="margin: 27px 0;" id="swapBtn"
+                        onclick="swapValue()" disabled>&LeftArrowRightArrow;</button>
+
+                    <div class="col-sm-7">
+                        <div class="form-group">
+                            <label for="To">To</label>
+                            <select class="form-select" name="To" id="to" onchange="toChange()">
+                                <option value="">Select Option</option>
+                                <option value="decimal">Decimal</option>
+                                <option value="binary">Binary</option>
+                                <option value="hexadecimal">Hexadecimal</option>
+                                <option value="octal">Octal</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-6 mx-auto">
+                    <button type="button" class="btn btn-success btn-lg" id="convertBtn" onclick="convertAns()"
+                        disabled>Convert</button>
+                    <button type="button" class="btn btn-danger btn-lg" id="resetBtn" onclick="resetAll()"
+                        disabled>Reset</button>
+                </div>
+            </div>
+            <br>
+            <p class="text-danger" id="answerP">Answer: <span class="text-success" id="showAnswer"></span></p>
+
+        </div>
+    </div>
+    <footer class="pt-5 my-5 text-success border-top">
+        Created by Sanjeet
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
